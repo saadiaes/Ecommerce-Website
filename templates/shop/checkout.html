@@ -1,0 +1,55 @@
+{%extends 'shop/base.html'%}
+{% block title %}Checkout{% endblock %}
+{% load static %}
+
+{% block content %}
+    
+<div>
+  <div class="row" >
+    <div class="com-md-8">            
+      <form method="POST">
+        {% csrf_token %}
+          <input type="hidden" id="items" name="items">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Name</label>
+            <input id="name" name="name"  type="text" class="form-control" id="inputEmail4" placeholder="saadia">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">Email</label>
+            <input id="email" name="email"  type="text" class="form-control" id="inputPassword4" placeholder="saadia@gmail.com">
+          </div>
+      </div>
+        <div class="form-group">
+          <label for="inputAddress">Address</label>
+          <input id="adress" name="adress" type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+    
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputCity">City</label>
+        <input id="city" name="city" type="text" class="form-control" id="inputCity">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputState">State</label>
+        <input id="state" name="state" type="text" class="form-control" id="inputState">
+
+      </div>
+      <div class="form-group col-md-2">
+        <label for="inputZip">Zip</label>
+        <input id="Zipcode " name="Zipcode" type="text" class="form-control" id="inputZip">
+      </div>
+    </div>
+    
+    
+        <button type="submit" class="btn btn-primary">Place order</button>
+      </form>
+                  </div>
+              </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
